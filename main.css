@@ -1,0 +1,287 @@
+html {
+  font-family: MS Sans Serif;
+}
+
+#container{
+  margin: auto;
+  margin-top:20px;
+  width:900px;
+  height: 665px;
+  border-width: 3px;
+border-spacing: 2px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+}
+
+#topbar {
+  float:clear;
+  height:20px;
+  border-bottom: 3px solid #C3C3C3;
+  border-right: 2px solid #C3C3C3;
+  background-color: #000082;
+}
+
+#topbar p {
+  padding-left: 2px;
+  font-size:14px;
+  margin:0;
+  color: white;
+  display: inline;
+}
+
+#topbar img {
+  padding: 0px;
+  position: relative;
+  display:inline-block;
+  margin:0;
+  left:2px;
+  top:2px;
+  width:16px;
+  height:16px;
+}
+
+
+#topbar button {
+  padding:0;
+  float:right;
+  height:16px;
+  width:17px;
+  font-weight: bold;
+  border-width: 2px;
+border-spacing: 1px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+}
+
+#topbar button:hover {}
+
+#topbar button:active {
+  /* background-color: #E1E1E1; */
+  border-width: 2px;
+border-spacing: 1px;
+border-style: inset;
+border-color: gray;
+border-collapse: separate;
+/* background-color: #C3C3C3; */
+}
+
+#button_minimize{
+  margin:0;
+  margin-top:2px;
+  margin-right:1px;
+  background-image: url("images/min.png");
+}
+
+#button_fullscreen{
+  margin:0;
+  margin-top:2px;
+  background-image: url("images/fullscreen.png");
+}
+
+#button_question{
+  margin:0;
+  margin-top:2px;
+  background-image: url("images/question.png");
+}
+
+#menu {
+  position:absolute;
+  top:130px;
+  left:400px;
+  width:650px;
+  height:400px;
+  border-width: 2px;
+border-spacing: 1px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+display:none;
+}
+
+#menu_topbar {
+  float:clear;
+  height:20px;
+  border-bottom: 3px solid #C3C3C3;
+  border-right: 2px solid #C3C3C3;
+  background-color: #000082;
+}
+
+#menu_topbar button {
+  padding:0;
+  float:right;
+  height:16px;
+  width:17px;
+  font-weight: bold;
+  border-width: 2px;
+border-spacing: 1px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+}
+
+#menu_topbar button:hover {}
+
+#menu_topbar button:active {
+  /* background-color: #E1E1E1; */
+  border-width: 2px;
+border-spacing: 1px;
+border-style: inset;
+border-color: gray;
+border-collapse: separate;
+/* background-color: #C3C3C3; */
+}
+
+#menu_topbar p {
+  padding-left: 2px;
+  font-size:14px;
+  margin:0;
+  color: white;
+  display: inline;
+}
+
+
+.button_close {
+  margin:0;
+  margin-top:2px;
+  margin-left:2px;
+  margin-right:2px;
+  background-image: url("images/close.png");
+}
+
+
+#store{
+  height: 670px;
+  width: 300px;
+  float:left;
+}
+
+#actualStore {
+  border-bottom: 3px solid black;
+  height: 369px;
+}
+
+#colorStore {
+    padding-top:12px;
+}
+
+#game{
+  float:left;
+}
+
+#home {
+  position:absolute;
+  margin-left: 700px;
+  margin-top:300px;
+    width: 85px;
+    height:100px;
+    background-color: white;
+    border:0px;
+  padding:0;
+}
+
+#home :active {
+  margin-left: 700px;
+  margin-top:300px;
+  padding:0;
+}
+
+#img_shortcut {
+  width:70px;
+  height:70px;
+}
+
+.uglyblue {
+  color:white;
+  margin:0;
+  background-color: #008080;
+}
+
+.allblue {
+  color:white;
+  margin:0;
+  background-color:#000082;
+}
+
+#store h1 {
+  padding:20px;
+  padding-top:0;
+  font-size: 28px;
+  margin-bottom:0;
+}
+
+#store h2 {
+  padding-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:0;
+  margin-bottom:18px;
+  padding-top:0;
+  width:155px;
+  height:1.1em;
+  font-size: 18px;
+}
+
+
+#store button {
+  padding:0px;
+  margin: 12px;
+  margin-left:24px;
+  margin-right:24px;
+  width:252px;
+  font-size:16px;
+  border-width: 3px;
+border-spacing: 2px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+color: grey;
+}
+
+#store button:active {
+  border-width: 3px;
+border-spacing: 2px;
+border-style: inset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+
+}
+#info {
+  height:290px;
+  margin:20px;
+}
+
+.knop {
+  padding:0px;
+  margin: 12px;
+  margin-left:24px;
+  margin-right:14px;
+  width:100px;
+  font-size:16px;
+  float: right;
+  bottom:0;
+  border-width: 3px;
+border-spacing: 2px;
+border-style: outset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+color: black;
+}
+
+.knop:active {
+  border-width: 3px;
+border-spacing: 2px;
+border-style: inset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+
+}

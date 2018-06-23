@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+    <script src="p5.min.js"></script>
+    <script src="addons/p5.dom.min.js"></script>
+    <script src="addons/p5.sound.min.js"></script>
+    <script src="main.js"></script>
+    <script src="store.js"></script>
+    <script src="colorStore.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Sneek Incremental</title>
+    <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
+  </head>
+  <body>
+<div id="container">
+  <div id="topbar">
+    <img src="icon.png" />
+    <p>Sneek Incremental</p>
+    <button class="button_close" onclick="location.href='empty.html';"></button>
+    <!-- <button id="button_fullscreen"></button> -->
+    <button id="button_question" onclick="openMenu()">_</button>
+    <!-- <button id="button_minimize">_</button> -->
+
+
+  </div>
+  <div id="game">
+  </div>
+  <div id="store">
+    <h1 id="dispApples"></h1>
+    <h2 id="bonus"></h2>
+
+    <div id="actualStore">
+    </div>
+    <div id="colorStore">
+    </div>
+
+  </div>
+</div>
+
+<div id="menu">
+<div id="menu_topbar">
+  <p>Help</p>
+  <button class="button_close" onclick="closeMenu()"></button>
+</div>
+<div id="info">
+  <p>Version 0<p>
+  <p>"WASD" or arrow-keys to move<p>
+  <p>Colors:</p>
+  <img src="images/colors1.png" />
+  <img src="images/colors2.png" />
+</div>
+<button class="knop" onclick="closeMenu()">OK</button>
+</div>
+  </body>
+</html>
