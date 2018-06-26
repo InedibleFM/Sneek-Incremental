@@ -9,6 +9,7 @@
     <script src="store.js"></script>
     <script src="colorStore.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="colors.css">
     <title>Sneek Incremental</title>
     <link rel="shortcut icon" type="image/png" href="images/icon.png"/>
   </head>
@@ -44,13 +45,40 @@
   <button class="button_close" onclick="closeMenu()"></button>
 </div>
 <div id="info">
-  <p>Version 0<p>
   <p>"WASD" or arrow-keys to move<p>
-  <p>Colors:</p>
-  <img src="images/colors1.png" />
-  <img src="images/colors2.png" />
+  <p>Snakeskins:</p>
+  <button  class="colorbutton" id="color_red" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_green" onclick="setColor('color_green');"></button>
+  <button  class="colorbutton" id="color_orange" onclick="setColor('color_orange');"></button>
+  <button  class="colorbutton" id="color_yellow" onclick="setColor('color_yellow');"></button>
+  <button  class="colorbutton" id="color_pink" onclick="setColor('color_pink');"></button>
+  <button  class="colorbutton" id="color_blue" onclick="setColor('color_blue');"></button>
+  <button  class="colorbutton" id="color_purple" onclick="setColor('color_purple');"></button>
+  <button  class="colorbutton" id="color_cyan" onclick="setColor('color_cyan');"></button>
+  <button  class="colorbutton" id="color_rainbow" onclick="setColor('color_rainbow');"></button>
+
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_');"></button>
+
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+  <button  class="colorbutton" id="color_" onclick="setColor('color_red');"></button>
+
 </div>
-<button class="knop" onclick="closeMenu()">OK</button>
+<button id="ok_knop" class="knop" onclick="closeMenu()" >OK</button>
 </div>
   </body>
 </html>

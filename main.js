@@ -3,6 +3,7 @@
 let rows = 600/20;
 let cols = 600/20;
 let dir = 0; //{0, 1, 2, 3, -1} : {N, E, S, W, undef}
+let bufdir = 0;
 let prev_dir = -1;
 let player;
 let length = 3;
@@ -14,14 +15,17 @@ let START_Y = 15;
 let dead= 0;
 let tickrate = 8;
 let highscore = 0;
+let rnb = 0;
 
 let extraApples;
 let appleFactor = 1;
 let bonusUnlocked = 0;
+let helpMenuNot = 0;
 
 let snakeColor = [255, 0, 0];
+let strokeColor = [255, 0, 0];
 
-let totalApples = 0;
+let totalApples = 10000;
 
 function shortcut() {
   document.getElementById('shortcut').setAttribute("class", "allblue");
@@ -81,8 +85,13 @@ class user {
   showI() {
     fill(snakeColor);
     // rect(us_x*20+2, us_y*20+2, 16, 16);
-    for(let i = 0; i<length; i++)
+    for(let i = 0; i<length; i++){
+      if (rainbow){
+        fill(rainbowlist[(i+rnb)%rainbowlist.length]);
+      }
       rect(snake_history[snake_history.length-1-i][0]*20+2, snake_history[snake_history.length-1-i][1]*20+2, 16, 16);
+    }
+    rnb++;
   }
 
   moves() {
@@ -91,6 +100,7 @@ class user {
     if (dir==2) us_y++;
     if (dir==0) us_y--;
     prev_dir = dir;
+    dir = bufdir;
 
     snake_history[snake_history.length] = new Array(2);
     snake_history[snake_history.length-1][0] = us_x;
@@ -101,6 +111,7 @@ class user {
     for (let i=0; i<apples.length; i++) {
     if (us_x == apples[i].x && us_y == apples[i].y){
       length++;
+      totalApples++;
       tickrate += 0.3; // increase speed every time it eats an apple
       frameRate(tickrate);
       apples[i] = new apple();
@@ -138,21 +149,29 @@ class apple {
 }
 
 function keyPressed() {
+  if(dir == prev_dir){
     if((keyCode == UP_ARROW || keyCode == 87) && prev_dir != 2) dir = 0;
     if ((keyCode == LEFT_ARROW || keyCode == 65) && prev_dir != 1) dir = 3;
     if ((keyCode == RIGHT_ARROW || keyCode == 68) && prev_dir != 3) dir = 1;
     if ((keyCode == DOWN_ARROW || keyCode == 83) && prev_dir != 0) dir = 2;
+  }
 
-    if (dead == 1 && (keyCode == 82 || keyCode == 32)) {
-      createSnake();
+
+    if(dir != prev_dir) {
+      if((keyCode == UP_ARROW || keyCode == 87) && dir != 2) bufdir = 0;
+      if ((keyCode == LEFT_ARROW || keyCode == 65) && dir != 1) bufdir = 3;
+      if ((keyCode == RIGHT_ARROW || keyCode == 68) && dir != 3) bufdir = 1;
+      if ((keyCode == DOWN_ARROW || keyCode == 83) && dir != 0) bufdir = 2;
     }
+
+    if (dead == 1 && (keyCode == 82 || keyCode == 32)) createSnake();
 
     return 0;
 }
 
 function gameOver() {
   extraApples = floor(pow(appleFactor, length))-1;
-  totalApples += length-3 + extraApples;
+  totalApples += extraApples;
   dead = 1;
   dir = floor(random(0,4));
   gameText();
@@ -171,8 +190,12 @@ function gameText() {
   text("Bonus apples: ", 7, 590);
   text(extraApples, 150, 590);
   }
-    if (length-3 > highscore) highscore = length-3;
-    bottombar();
+  if (helpMenuNot){
+  textSize(20);
+  text("(Select your skins in the help menu at the top)", 100, 450);
+  }
+  if (length-3 > highscore) highscore = length-3;
+  bottombar();
 }
 
 function createSnake() {

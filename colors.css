@@ -1,0 +1,26 @@
+.colorbutton {
+  height: 56px;
+  width:56px;
+  margin-right:8px;
+  margin-bottom:8px;
+  font-size:16px;
+  border-width: 3px;
+  border-spacing: 2px;
+  border-style: outset;
+  border-color: gray;
+  border-collapse: separate;
+  background-color: #C3C3C3;
+  color: black;
+  background-image: url("images/unknown.png");
+}
+
+.colorbutton:active {
+  border-width: 3px;
+border-spacing: 2px;
+border-style: inset;
+border-color: gray;
+border-collapse: separate;
+background-color: #C3C3C3;
+}
+
+#color_red {background-image: url("images/red.png");}
