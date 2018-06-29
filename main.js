@@ -25,7 +25,7 @@ let helpMenuNot = 0;
 let snakeColor = [255, 255, 255];
 let strokeColor = [255, 0, 0];
 
-let totalApples = 10000;
+let totalApples = 0;
 
 function shortcut() {
   document.getElementById('shortcut').setAttribute("class", "allblue");
