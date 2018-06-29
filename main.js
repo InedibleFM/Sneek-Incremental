@@ -22,10 +22,10 @@ let appleFactor = 1;
 let bonusUnlocked = 0;
 let helpMenuNot = 0;
 
-let snakeColor = [255, 0, 0];
+let snakeColor = [255, 255, 255];
 let strokeColor = [255, 0, 0];
 
-let totalApples = 0;
+let totalApples = 10000;
 
 function shortcut() {
   document.getElementById('shortcut').setAttribute("class", "allblue");
@@ -143,8 +143,9 @@ class apple {
     }
 
   showI() {
-    fill(50, 100, 150);
-    rect(this.x*20+2, this.y*20+2, 16, 16);
+    fill(255, 0, 0);
+    //rect(this.x*20+2, this.y*20+2, 16, 16);
+    ellipse(this.x*20+10, this.y*20+10, 16, 16);
   }
 }
 

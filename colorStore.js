@@ -90,7 +90,7 @@ function col_buyItem(item,i){
 
     if (item.id == "color_yellow") {
       helpMenuNot = 1;
-      if (dead) {  
+      if (dead) {
         textSize(20);
         text("(Select your skins in the help menu at the top)", 100, 450);
       }
@@ -127,8 +127,8 @@ function setColor(color) {
   }
 
   if (!findIt) {
-    if (color == "color_red") {
-      snakeColor = [255, 0, 0];
+    if (color == "color_white") {
+      snakeColor = [255, 255, 255];
       rainbow = 0;
     }
 
